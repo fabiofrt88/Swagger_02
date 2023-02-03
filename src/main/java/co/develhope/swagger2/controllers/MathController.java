@@ -27,7 +27,7 @@ public class MathController {
 
     @GetMapping(value = "/square/{n}")
     @ApiOperation(value = "Square", notes = "This method return square of param")
-    public Integer square(@RequestParam (required = false, value = "n") Integer n){
+    public Integer square(@PathVariable (required = false, value = "n") Integer n){
         Integer squareResult = n * n;
         return squareResult;
     }
